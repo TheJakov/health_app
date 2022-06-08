@@ -120,29 +120,9 @@ TextStyle pageTitle = GoogleFonts.roboto(
 
 /// LIST OF SCREENS
 List<Widget> _listOfWidget = <Widget>[
-  /// HOME
-  HomeWidget(),
 
-  /// REPORTS
-  Container(
-    alignment: Alignment.center,
-    color: Colors.white,
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(
-          Icons.medical_services,
-          size: iconSize,
-          color: Colors.white,
-        ),
-        Text("My medical reports",
-            style: GoogleFonts.oxygen(
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-                color: Colors.black)),
-      ],
-    ),
-  ),
+  const HomeWidget(),
+  const MedicalReportsWidget(),
 
   /// APPOINTMENTS
   Container(
@@ -179,19 +159,39 @@ List<Widget> _listOfWidget = <Widget>[
   ),
 ];
 
-class HomeWidget extends StatelessWidget {
-   HomeWidget({
+class MedicalReportsWidget extends StatelessWidget {
+  const MedicalReportsWidget({
     Key? key,
   }) : super(key: key);
 
-   final TextStyle defaultItemTitleStyle = GoogleFonts.roboto(
-       fontSize: 20, fontWeight: FontWeight.w400, color: Colors.white);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      color: Colors.redAccent,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.medical_services,
+            size: iconSize,
+            color: Colors.white,
+          ),
+          Text("My medical reports",
+              style: GoogleFonts.oxygen(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white)),
+        ],
+      ),
+    );
+  }
+}
 
-  final TextStyle defaultStyle = GoogleFonts.roboto(
-      fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white);
-
-  final TextStyle darkDefaultStyle = GoogleFonts.roboto(
-      fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black);
+class HomeWidget extends StatelessWidget {
+  const HomeWidget({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
