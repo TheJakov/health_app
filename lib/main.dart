@@ -116,7 +116,7 @@ TextStyle fontStyle = GoogleFonts.oxygen(
 double iconSize = 200;
 
 TextStyle pageTitle = GoogleFonts.roboto(
-    fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black);
+    fontSize: 25, fontWeight: FontWeight.w600, color: Colors.black87);
 
 /// LIST OF SCREENS
 List<Widget> _listOfWidget = <Widget>[
@@ -211,20 +211,32 @@ class HomeWidget extends StatelessWidget {
                     textAlign: TextAlign.left, style: pageTitle),
                 ]
             ),
-            buildRoundedCard(context, Colors.lightBlue, "Naslov", "Ovo je opis", widthRatio: 0.9),
-            buildRoundedCard(context, Colors.redAccent, "Naslov 2", "Ovo je opis 2", widthRatio: 0.9),
+            buildRoundedCard(context, Colors.pinkAccent, "Reports: 0", "No new medical reports", widthRatio: 0.9),
+            buildRoundedCard(context, Colors.deepPurpleAccent, "Appointments: 1", "1 scheduled appointment", widthRatio: 0.9),
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.fromLTRB(0,20,0,0),
                   child: Column(children: [
                     Text("News", style: pageTitle),
-                    const Text("aaa"),
-                    const Text("aaa")
                   ]),
                 ),
               ],
             ),
+            buildRoundedCard(context, Colors.lightBlue, "Notice to patients", "We are happy to announce ...",
+                widthRatio: 0.9,
+                titleStyle: const TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                descStyle: const TextStyle(fontSize: 20, color: Colors.black87)),
+            buildRoundedCard(
+                context, Colors.lightBlue, "CEZIH is not working", "Earlier this morning, our systems ...",
+                widthRatio: 0.9,
+                titleStyle: const TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                descStyle: const TextStyle(fontSize: 20, color: Colors.black87)),
+            buildRoundedCard(
+                context, Colors.lightBlue, "Legendary DEV team", "Group of godlike engineers started to work on our new app ...",
+                widthRatio: 0.9,
+                titleStyle: const TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                descStyle: const TextStyle(fontSize: 20, color: Colors.black87)),
           ],
         ),
       ),
