@@ -362,7 +362,7 @@ class PatientWidget extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Working hours:",
+                            Text("Today's shift:",
                                 style: GoogleFonts.quicksand(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
