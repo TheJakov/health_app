@@ -178,7 +178,7 @@ class PatientWidget extends StatelessWidget {
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Colors.black)),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -189,7 +189,7 @@ class PatientWidget extends StatelessWidget {
                     top: 20, left: 20, right: 20, bottom: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xFF99d5d3)),
+                    color: const Color(0xFF99d5d3)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -198,7 +198,7 @@ class PatientWidget extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.w900,
                             color: Colors.black)),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -212,7 +212,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("S.S.Kranjcevica 66",
@@ -224,7 +224,7 @@ class PatientWidget extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -238,7 +238,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("Valid",
@@ -250,7 +250,7 @@ class PatientWidget extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -264,7 +264,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("Valid",
@@ -281,7 +281,7 @@ class PatientWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
@@ -292,7 +292,7 @@ class PatientWidget extends StatelessWidget {
                     top: 20, left: 20, right: 20, bottom: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xFFf7be7d)),
+                    color: const Color(0xFFf7be7d)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -301,7 +301,7 @@ class PatientWidget extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.w900,
                             color: Colors.black)),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -315,7 +315,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("dr.spec.mag Jack Sparrow",
@@ -327,7 +327,7 @@ class PatientWidget extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -341,7 +341,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("Black Pearl 1312",
@@ -353,7 +353,7 @@ class PatientWidget extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -367,7 +367,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("07:00 - 14:00",
@@ -397,14 +397,14 @@ class PatientWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(mainAxisAlignment: MainAxisAlignment.end, children: [
             Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFb12341),
+                  color: const Color(0xFFb12341),
                 ),
                 width: MediaQuery.of(context).size.width * 0.6,
                 height: 60,
@@ -413,7 +413,7 @@ class PatientWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.add,
                         size: 20,
                         color: Colors.white,
