@@ -439,77 +439,78 @@ class MedicalReportsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.center,
-      color: Colors.white,
-      width: MediaQuery.of(context).size.width,
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Row(children: [
-                Text("My medical reports",
-                    textAlign: TextAlign.left, style: pageTitleMain),
-              ]),
-              Row(
+        alignment: Alignment.center,
+        color: Colors.white,
+        width: MediaQuery.of(context).size.width,
+        child: SingleChildScrollView(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    child: Column(children: [
-                      Text("Upcoming reports", style: pageTitle),
-                    ]),
+                  Row(children: [
+                    Text("My medical reports",
+                        textAlign: TextAlign.left, style: pageTitleMain),
+                  ]),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                        child: Column(children: [
+                          Text("Upcoming reports", style: pageTitle),
+                        ]),
+                      ),
+                    ],
                   ),
+                  buildRoundedReport(context, Color(themeYellowHex),
+                      "Covid PCR test", "ZZJZ Split", "19-06-2022",
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 20, color: Colors.black),
+                      dateStyle: GoogleFonts.quicksand(
+                          fontSize: 10, color: Colors.black),
+                      widthRatio: 0.9),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                        child: Column(children: [
+                          Text("Finished reports", style: pageTitle),
+                        ]),
+                      ),
+                    ],
+                  ),
+                  buildRoundedReport(context, Color(themeLightBlueHex),
+                      "Urine sample testing", "ZZJZ Split", "03-03-2022",
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 20, color: Colors.black),
+                      dateStyle: GoogleFonts.quicksand(
+                          fontSize: 10, color: Colors.black),
+                      widthRatio: 0.9),
+                  buildRoundedReport(context, Color(themeMagentaHex),
+                      "Blood test", "ZZJZ Split", "11-01-2022",
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 20, color: Colors.white),
+                      dateStyle: GoogleFonts.quicksand(
+                          fontSize: 10, color: Colors.white),
+                      widthRatio: 0.9),
                 ],
               ),
-              buildRoundedReport(context, Color(themeYellowHex),
-                  "Covid PCR test", "ZZJZ Split", "19-06-2022",
-                  titleStyle: GoogleFonts.quicksand(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                  descStyle:
-                      GoogleFonts.quicksand(fontSize: 20, color: Colors.black),
-                  dateStyle:
-                      GoogleFonts.quicksand(fontSize: 10, color: Colors.black),
-                  widthRatio: 0.9),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    child: Column(children: [
-                      Text("Finished reports", style: pageTitle),
-                    ]),
-                  ),
-                ],
-              ),
-              buildRoundedReport(context, Color(themeLightBlueHex),
-                  "Urine sample testing", "ZZJZ Split", "03-03-2022",
-                  titleStyle: GoogleFonts.quicksand(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                  descStyle:
-                      GoogleFonts.quicksand(fontSize: 20, color: Colors.black),
-                  dateStyle:
-                      GoogleFonts.quicksand(fontSize: 10, color: Colors.black),
-                  widthRatio: 0.9),
-              buildRoundedReport(context, Color(themeMagentaHex), "Blood test",
-                  "ZZJZ Split", "11-01-2022",
-                  titleStyle: GoogleFonts.quicksand(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                  descStyle:
-                      GoogleFonts.quicksand(fontSize: 20, color: Colors.white),
-                  dateStyle:
-                      GoogleFonts.quicksand(fontSize: 10, color: Colors.white),
-                  widthRatio: 0.9),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
 
@@ -521,92 +522,93 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      alignment: Alignment.center,
-      width: MediaQuery.of(context).size.width,
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Row(children: [
-                Text("Welcome back, Jakov",
-                    textAlign: TextAlign.left, style: pageTitleMain),
-              ]),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    child: Column(children: [
-                      Text("Overview", style: pageTitle),
-                    ]),
+        color: Colors.white,
+        alignment: Alignment.center,
+        width: MediaQuery.of(context).size.width,
+        child: SingleChildScrollView(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Row(children: [
+                    Text("Welcome back, Jakov",
+                        textAlign: TextAlign.left, style: pageTitleMain),
+                  ]),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                        child: Column(children: [
+                          Text("Overview", style: pageTitle),
+                        ]),
+                      ),
+                    ],
                   ),
+                  buildRoundedCard(context, Color(themeMagentaHex),
+                      "Reports: 0", "No new medical reports",
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 20, color: Colors.white),
+                      widthRatio: 0.9),
+                  buildRoundedCard(context, Color(themeYellowHex),
+                      "Appointments: 1", "1 scheduled appointment",
+                      widthRatio: 0.9,
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 20, color: Colors.black)),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                        child: Column(children: [
+                          Text("News", style: pageTitle),
+                        ]),
+                      ),
+                    ],
+                  ),
+                  buildRoundedCard(context, Color(themeLightBlueHex),
+                      "Notice to patients", "We are happy to announce ...",
+                      widthRatio: 0.9,
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 20, color: Colors.black)),
+                  buildRoundedCard(context, Color(themeLightBlueHex),
+                      "Out of service", "Earlier this morning, our systems ...",
+                      widthRatio: 0.9,
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 20, color: Colors.black)),
+                  buildRoundedCard(
+                      context,
+                      Color(themeLightBlueHex),
+                      "Legendary DEV team",
+                      "Group of godlike engineers started to work on our new app ...",
+                      widthRatio: 0.9,
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 20, color: Colors.black)),
                 ],
               ),
-              buildRoundedCard(context, Color(themeMagentaHex), "Reports: 0",
-                  "No new medical reports",
-                  titleStyle: GoogleFonts.quicksand(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                  descStyle:
-                      GoogleFonts.quicksand(fontSize: 20, color: Colors.white),
-                  widthRatio: 0.9),
-              buildRoundedCard(context, Color(themeYellowHex),
-                  "Appointments: 1", "1 scheduled appointment",
-                  widthRatio: 0.9,
-                  titleStyle: GoogleFonts.quicksand(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                  descStyle:
-                      GoogleFonts.quicksand(fontSize: 20, color: Colors.black)),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    child: Column(children: [
-                      Text("News", style: pageTitle),
-                    ]),
-                  ),
-                ],
-              ),
-              buildRoundedCard(context, Color(themeLightBlueHex),
-                  "Notice to patients", "We are happy to announce ...",
-                  widthRatio: 0.9,
-                  titleStyle: GoogleFonts.quicksand(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                  descStyle:
-                      GoogleFonts.quicksand(fontSize: 20, color: Colors.black)),
-              buildRoundedCard(context, Color(themeLightBlueHex),
-                  "Out of service", "Earlier this morning, our systems ...",
-                  widthRatio: 0.9,
-                  titleStyle: GoogleFonts.quicksand(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                  descStyle:
-                      GoogleFonts.quicksand(fontSize: 20, color: Colors.black)),
-              buildRoundedCard(
-                  context,
-                  Color(themeLightBlueHex),
-                  "Legendary DEV team",
-                  "Group of godlike engineers started to work on our new app ...",
-                  widthRatio: 0.9,
-                  titleStyle: GoogleFonts.quicksand(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                  descStyle:
-                      GoogleFonts.quicksand(fontSize: 20, color: Colors.black)),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
 
