@@ -148,7 +148,7 @@ class AppointmentsWidget extends StatelessWidget {
         child: const Icon(Icons.add),
         backgroundColor: Color(themeMagentaHex),
         onPressed: () => {},
-        hoverColor: Color(themeLightBlueHex),
+        hoverColor: Color(themeYellowHex),
       ),
       body: Container(
         alignment: Alignment.topLeft,
