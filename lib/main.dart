@@ -142,20 +142,105 @@ class AppointmentsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.deepPurpleAccent,
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.event_rounded,
-            size: iconSize,
-            color: Colors.white,
-          ),
-          Text("My appointments", style: fontStyle),
-        ],
+    return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        backgroundColor: Color(themeMagentaHex),
+        onPressed: () => {},
+        hoverColor: Color(themeYellowHex),
       ),
+      body: Container(
+        alignment: Alignment.topLeft,
+        color: Colors.white,
+        width: MediaQuery.of(context).size.width,
+        child: SingleChildScrollView(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(children: [
+                    Text("My medical appointments",
+                        textAlign: TextAlign.left, style: pageTitleMain),
+                  ]),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                        child: Column(children: [
+                          Text("Upcoming appointments", style: pageTitle),
+                        ]),
+                      ),
+                    ],
+                  ),
+                  buildRoundedAppointment(
+                      context,
+                      Color(themeLightBlueHex),
+                      "Abdomen check",
+                      "dr. med. Jack Sparrow",
+                      "Black Pearl 2A", "13-07-2022",
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 16, color: Colors.black),
+                      dateStyle: GoogleFonts.quicksand(
+                          fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                      addressStyle: GoogleFonts.quicksand(
+                          fontSize: 14, color: Colors.black, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
+                      widthRatio: 0.9),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                        child: Column(children: [
+                          Text("Past appointments", style: pageTitle),
+                        ]),
+                      ),
+                    ],
+                  ),
+                  buildRoundedAppointment(
+                      context,
+                      Color(themeYellowHex),
+                      "Knee check",
+                      "dr. med. Will Turner",
+                      "Flying Dutchman 3C", "25-05-2022",
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 16, color: Colors.black),
+                      dateStyle: GoogleFonts.quicksand(
+                          fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                      addressStyle: GoogleFonts.quicksand(
+                          fontSize: 14, color: Colors.black, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
+                      widthRatio: 0.9),
+                  buildRoundedAppointment(
+                      context,
+                      Color(themeYellowHex),
+                      "Reality check",
+                      "dr. med. Jack Sparrow",
+                      "Black Pearl 2A", "13-04-2022",
+                      titleStyle: GoogleFonts.quicksand(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      descStyle: GoogleFonts.quicksand(
+                          fontSize: 16, color: Colors.black),
+                      dateStyle: GoogleFonts.quicksand(
+                          fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                      addressStyle: GoogleFonts.quicksand(
+                          fontSize: 14, color: Colors.black, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
+                      widthRatio: 0.9),
+                ],
+              ),
+            ),
+          ),
+        )),
     );
   }
 }
@@ -173,12 +258,12 @@ class PatientWidget extends StatelessWidget {
       padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
       child: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text("Luka Rokolj",
+          Text("Jakov Kristović",
               style: GoogleFonts.quicksand(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Colors.black)),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -189,7 +274,7 @@ class PatientWidget extends StatelessWidget {
                     top: 20, left: 20, right: 20, bottom: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xFF99d5d3)),
+                    color: Color(themeLightBlueHex)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -198,7 +283,7 @@ class PatientWidget extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.w900,
                             color: Colors.black)),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -212,7 +297,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("S.S.Kranjcevica 66",
@@ -224,7 +309,7 @@ class PatientWidget extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -238,7 +323,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("Valid",
@@ -250,7 +335,7 @@ class PatientWidget extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -264,7 +349,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("Valid",
@@ -281,7 +366,7 @@ class PatientWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
@@ -292,7 +377,7 @@ class PatientWidget extends StatelessWidget {
                     top: 20, left: 20, right: 20, bottom: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xFFf7be7d)),
+                    color: Color(themeYellowHex)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -301,7 +386,7 @@ class PatientWidget extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.w900,
                             color: Colors.black)),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -315,7 +400,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("dr.spec.mag Jack Sparrow",
@@ -327,7 +412,7 @@ class PatientWidget extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -341,7 +426,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("Black Pearl 1312",
@@ -353,7 +438,7 @@ class PatientWidget extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -367,7 +452,7 @@ class PatientWidget extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text("07:00 - 14:00",
@@ -397,14 +482,14 @@ class PatientWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(mainAxisAlignment: MainAxisAlignment.end, children: [
             Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFb12341),
+                  color: Color(themeMagentaHex),
                 ),
                 width: MediaQuery.of(context).size.width * 0.6,
                 height: 60,
@@ -413,7 +498,7 @@ class PatientWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.add,
                         size: 20,
                         color: Colors.white,
@@ -439,7 +524,7 @@ class MedicalReportsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        alignment: Alignment.center,
+        alignment: Alignment.topLeft,
         color: Colors.white,
         width: MediaQuery.of(context).size.width,
         child: SingleChildScrollView(
@@ -523,7 +608,7 @@ class HomeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.white,
-        alignment: Alignment.center,
+        alignment: Alignment.topLeft,
         width: MediaQuery.of(context).size.width,
         child: SingleChildScrollView(
           child: Center(
@@ -733,6 +818,68 @@ Widget buildRoundedReport(BuildContext context, Color backgroundColor,
             Text(
               date,
               style: descStyle,
+            ),
+          ],
+        ),
+      ),
+    );
+
+Widget buildRoundedAppointment(BuildContext context, Color backgroundColor,
+    String title, String description, String address, String date,
+    {TextStyle titleStyle = const TextStyle(
+        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+      TextStyle descStyle =
+      const TextStyle(fontSize: 20, color: Colors.white),
+      TextStyle dateStyle =
+      const TextStyle(fontSize: 15, color: Colors.white),
+      TextStyle addressStyle =
+      const TextStyle(fontSize: 15, color: Colors.black, fontStyle: FontStyle.italic),
+      double widthRatio = 0.8}) =>
+    Card(
+      margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Container(
+        width: MediaQuery.of(context).size.width * widthRatio,
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: const BorderRadius.all(Radius.circular(12)),
+        ),
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: titleStyle,
+            ),
+            const SizedBox(height: 4),
+            Text(
+              description,
+              style: descStyle,
+            ),
+            const SizedBox(height: 4),
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      date,
+                      style: dateStyle),
+                  ],
+                ),
+                const SizedBox(width: 25),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                        address,
+                        style: addressStyle, textAlign: TextAlign.right),
+                  ],
+                )
+              ],
             ),
           ],
         ),
