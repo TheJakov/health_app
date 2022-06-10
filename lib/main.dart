@@ -546,24 +546,42 @@ class HomeWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  buildRoundedCard(context, Color(themeMagentaHex),
-                      "Reports: 0", "No new medical reports",
-                      titleStyle: GoogleFonts.quicksand(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                      descStyle: GoogleFonts.quicksand(
-                          fontSize: 20, color: Colors.white),
-                      widthRatio: 0.9),
-                  buildRoundedCard(context, Color(themeYellowHex),
-                      "Appointments: 1", "1 scheduled appointment",
-                      widthRatio: 0.9,
-                      titleStyle: GoogleFonts.quicksand(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                      descStyle: GoogleFonts.quicksand(
-                          fontSize: 20, color: Colors.black)),
+                  buildRoundedCard(
+                    context,
+                    Color(themeMagentaHex),
+                    "Reports: 0",
+                    "No new medical reports",
+                    titleStyle: GoogleFonts.quicksand(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                    descStyle: GoogleFonts.quicksand(
+                        fontSize: 20, color: Colors.white),
+                    widthRatio: 0.9,
+                    Icon(
+                      Icons.medical_services,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  buildRoundedCard(
+                    context,
+                    Color(themeYellowHex),
+                    "Appointments: 1",
+                    "1 scheduled appointment",
+                    widthRatio: 0.9,
+                    titleStyle: GoogleFonts.quicksand(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    descStyle: GoogleFonts.quicksand(
+                        fontSize: 20, color: Colors.black),
+                    Icon(
+                      Icons.event_rounded,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                  ),
                   Row(
                     children: [
                       Padding(
@@ -574,36 +592,60 @@ class HomeWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  buildRoundedCard(context, Color(themeLightBlueHex),
-                      "Notice to patients", "We are happy to announce ...",
-                      widthRatio: 0.9,
-                      titleStyle: GoogleFonts.quicksand(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                      descStyle: GoogleFonts.quicksand(
-                          fontSize: 20, color: Colors.black)),
-                  buildRoundedCard(context, Color(themeLightBlueHex),
-                      "Out of service", "Earlier this morning, our systems ...",
-                      widthRatio: 0.9,
-                      titleStyle: GoogleFonts.quicksand(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                      descStyle: GoogleFonts.quicksand(
-                          fontSize: 20, color: Colors.black)),
                   buildRoundedCard(
-                      context,
-                      Color(themeLightBlueHex),
-                      "Legendary DEV team",
-                      "Group of godlike engineers started to work on our new app ...",
-                      widthRatio: 0.9,
-                      titleStyle: GoogleFonts.quicksand(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                      descStyle: GoogleFonts.quicksand(
-                          fontSize: 20, color: Colors.black)),
+                    context,
+                    Color(themeLightBlueHex),
+                    "Notice to patients",
+                    "We are happy to announce ...",
+                    widthRatio: 0.9,
+                    titleStyle: GoogleFonts.quicksand(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    descStyle: GoogleFonts.quicksand(
+                        fontSize: 20, color: Colors.black),
+                    Icon(
+                      Icons.info_outline,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  buildRoundedCard(
+                    context,
+                    Color(themeLightBlueHex),
+                    "Out of service",
+                    "Earlier this morning, our systems ...",
+                    widthRatio: 0.9,
+                    titleStyle: GoogleFonts.quicksand(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    descStyle: GoogleFonts.quicksand(
+                        fontSize: 20, color: Colors.black),
+                    Icon(
+                      Icons.info_outline,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  buildRoundedCard(
+                    context,
+                    Color(themeLightBlueHex),
+                    "Legendary DEV team",
+                    "Group of godlike engineers started to work on our new app ...",
+                    widthRatio: 0.9,
+                    titleStyle: GoogleFonts.quicksand(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    descStyle: GoogleFonts.quicksand(
+                        fontSize: 20, color: Colors.black),
+                    Icon(
+                      Icons.info_outline,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -613,7 +655,7 @@ class HomeWidget extends StatelessWidget {
 }
 
 Widget buildRoundedCard(BuildContext context, Color backgroundColor,
-        String title, String description,
+        String title, String description, Icon icon,
         {TextStyle titleStyle = const TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         TextStyle descStyle =
@@ -634,9 +676,15 @@ Widget buildRoundedCard(BuildContext context, Color backgroundColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: titleStyle,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: titleStyle,
+                ),
+                icon
+              ],
             ),
             const SizedBox(height: 4),
             Text(
