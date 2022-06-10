@@ -151,36 +151,37 @@ class AppointmentsWidget extends StatelessWidget {
         hoverColor: Color(themeYellowHex),
       ),
       body: Container(
-        alignment: Alignment.topLeft,
-        color: Colors.white,
-        width: MediaQuery.of(context).size.width,
-        child: SingleChildScrollView(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Row(children: [
-                    Text("My medical appointments",
-                        textAlign: TextAlign.left, style: pageTitleMain),
-                  ]),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                        child: Column(children: [
-                          Text("Upcoming appointments", style: pageTitle),
-                        ]),
-                      ),
-                    ],
-                  ),
-                  buildRoundedAppointment(
+          alignment: Alignment.topLeft,
+          color: Colors.white,
+          width: MediaQuery.of(context).size.width,
+          child: SingleChildScrollView(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Row(children: [
+                      Text("My medical appointments",
+                          textAlign: TextAlign.left, style: pageTitleMain),
+                    ]),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Column(children: [
+                            Text("Upcoming appointments", style: pageTitle),
+                          ]),
+                        ),
+                      ],
+                    ),
+                    buildRoundedAppointment(
                       context,
                       Color(themeLightBlueHex),
                       "Abdomen check",
                       "dr. med. Jack Sparrow",
-                      "Black Pearl 2A", "13-07-2022",
+                      "Black Pearl 2A",
+                      "13-07-2022",
                       titleStyle: GoogleFonts.quicksand(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -188,26 +189,38 @@ class AppointmentsWidget extends StatelessWidget {
                       descStyle: GoogleFonts.quicksand(
                           fontSize: 16, color: Colors.black),
                       dateStyle: GoogleFonts.quicksand(
-                          fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
                       addressStyle: GoogleFonts.quicksand(
-                          fontSize: 14, color: Colors.black, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
-                      widthRatio: 0.9),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                        child: Column(children: [
-                          Text("Past appointments", style: pageTitle),
-                        ]),
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold),
+                      widthRatio: 0.9,
+                      Icon(
+                        Icons.timelapse,
+                        size: 20,
+                        color: Colors.black,
                       ),
-                    ],
-                  ),
-                  buildRoundedAppointment(
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Column(children: [
+                            Text("Past appointments", style: pageTitle),
+                          ]),
+                        ),
+                      ],
+                    ),
+                    buildRoundedAppointment(
                       context,
                       Color(themeYellowHex),
                       "Knee check",
                       "dr. med. Will Turner",
-                      "Flying Dutchman 3C", "25-05-2022",
+                      "Flying Dutchman 3C",
+                      "25-05-2022",
                       titleStyle: GoogleFonts.quicksand(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -215,16 +228,28 @@ class AppointmentsWidget extends StatelessWidget {
                       descStyle: GoogleFonts.quicksand(
                           fontSize: 16, color: Colors.black),
                       dateStyle: GoogleFonts.quicksand(
-                          fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
                       addressStyle: GoogleFonts.quicksand(
-                          fontSize: 14, color: Colors.black, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
-                      widthRatio: 0.9),
-                  buildRoundedAppointment(
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold),
+                      widthRatio: 0.9,
+                      Icon(
+                        Icons.event_available,
+                        size: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                    buildRoundedAppointment(
                       context,
                       Color(themeYellowHex),
                       "Reality check",
                       "dr. med. Jack Sparrow",
-                      "Black Pearl 2A", "13-04-2022",
+                      "Black Pearl 2A",
+                      "13-04-2022",
                       titleStyle: GoogleFonts.quicksand(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -232,15 +257,26 @@ class AppointmentsWidget extends StatelessWidget {
                       descStyle: GoogleFonts.quicksand(
                           fontSize: 16, color: Colors.black),
                       dateStyle: GoogleFonts.quicksand(
-                          fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
                       addressStyle: GoogleFonts.quicksand(
-                          fontSize: 14, color: Colors.black, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
-                      widthRatio: 0.9),
-                ],
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold),
+                      widthRatio: 0.9,
+                      Icon(
+                        Icons.event_available,
+                        size: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        )),
+          )),
     );
   }
 }
@@ -548,17 +584,27 @@ class MedicalReportsWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  buildRoundedReport(context, Color(themeYellowHex),
-                      "Covid PCR test", "ZZJZ Split", "19-06-2022",
-                      titleStyle: GoogleFonts.quicksand(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                      descStyle: GoogleFonts.quicksand(
-                          fontSize: 20, color: Colors.black),
-                      dateStyle: GoogleFonts.quicksand(
-                          fontSize: 10, color: Colors.black),
-                      widthRatio: 0.9),
+                  buildRoundedReport(
+                    context,
+                    Color(themeYellowHex),
+                    "Covid PCR test",
+                    "ZZJZ Split",
+                    "19-06-2022",
+                    titleStyle: GoogleFonts.quicksand(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    descStyle: GoogleFonts.quicksand(
+                        fontSize: 20, color: Colors.black),
+                    dateStyle: GoogleFonts.quicksand(
+                        fontSize: 10, color: Colors.black),
+                    widthRatio: 0.9,
+                    Icon(
+                      Icons.timelapse,
+                      size: 20,
+                      color: Colors.black,
+                    ),
+                  ),
                   Row(
                     children: [
                       Padding(
@@ -569,28 +615,48 @@ class MedicalReportsWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  buildRoundedReport(context, Color(themeLightBlueHex),
-                      "Urine sample testing", "ZZJZ Split", "03-03-2022",
-                      titleStyle: GoogleFonts.quicksand(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                      descStyle: GoogleFonts.quicksand(
-                          fontSize: 20, color: Colors.black),
-                      dateStyle: GoogleFonts.quicksand(
-                          fontSize: 10, color: Colors.black),
-                      widthRatio: 0.9),
-                  buildRoundedReport(context, Color(themeMagentaHex),
-                      "Blood test", "ZZJZ Split", "11-01-2022",
-                      titleStyle: GoogleFonts.quicksand(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                      descStyle: GoogleFonts.quicksand(
-                          fontSize: 20, color: Colors.white),
-                      dateStyle: GoogleFonts.quicksand(
-                          fontSize: 10, color: Colors.white),
-                      widthRatio: 0.9),
+                  buildRoundedReport(
+                    context,
+                    Color(themeLightBlueHex),
+                    "Urine sample testing",
+                    "ZZJZ Split",
+                    "03-03-2022",
+                    titleStyle: GoogleFonts.quicksand(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    descStyle: GoogleFonts.quicksand(
+                        fontSize: 20, color: Colors.black),
+                    dateStyle: GoogleFonts.quicksand(
+                        fontSize: 10, color: Colors.black),
+                    widthRatio: 0.9,
+                    Icon(
+                      Icons.event_available,
+                      size: 20,
+                      color: Colors.black,
+                    ),
+                  ),
+                  buildRoundedReport(
+                    context,
+                    Color(themeMagentaHex),
+                    "Blood test",
+                    "ZZJZ Split",
+                    "11-01-2022",
+                    titleStyle: GoogleFonts.quicksand(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                    descStyle: GoogleFonts.quicksand(
+                        fontSize: 20, color: Colors.white),
+                    dateStyle: GoogleFonts.quicksand(
+                        fontSize: 10, color: Colors.white),
+                    widthRatio: 0.9,
+                    Icon(
+                      Icons.event_available,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -664,7 +730,7 @@ class HomeWidget extends StatelessWidget {
                     Icon(
                       Icons.event_rounded,
                       size: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   Row(
@@ -692,7 +758,7 @@ class HomeWidget extends StatelessWidget {
                     Icon(
                       Icons.info_outline,
                       size: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   buildRoundedCard(
@@ -710,7 +776,7 @@ class HomeWidget extends StatelessWidget {
                     Icon(
                       Icons.info_outline,
                       size: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   buildRoundedCard(
@@ -728,7 +794,7 @@ class HomeWidget extends StatelessWidget {
                     Icon(
                       Icons.info_outline,
                       size: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -782,7 +848,7 @@ Widget buildRoundedCard(BuildContext context, Color backgroundColor,
     );
 
 Widget buildRoundedReport(BuildContext context, Color backgroundColor,
-        String title, String description, String date,
+        String title, String description, String date, Icon icon,
         {TextStyle titleStyle = const TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         TextStyle descStyle =
@@ -805,9 +871,15 @@ Widget buildRoundedReport(BuildContext context, Color backgroundColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: titleStyle,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: titleStyle,
+                ),
+                icon
+              ],
             ),
             const SizedBox(height: 4),
             Text(
@@ -824,17 +896,23 @@ Widget buildRoundedReport(BuildContext context, Color backgroundColor,
       ),
     );
 
-Widget buildRoundedAppointment(BuildContext context, Color backgroundColor,
-    String title, String description, String address, String date,
-    {TextStyle titleStyle = const TextStyle(
-        fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-      TextStyle descStyle =
-      const TextStyle(fontSize: 20, color: Colors.white),
-      TextStyle dateStyle =
-      const TextStyle(fontSize: 15, color: Colors.white),
-      TextStyle addressStyle =
-      const TextStyle(fontSize: 15, color: Colors.black, fontStyle: FontStyle.italic),
-      double widthRatio = 0.8}) =>
+Widget buildRoundedAppointment(
+        BuildContext context,
+        Color backgroundColor,
+        String title,
+        String description,
+        String address,
+        String date,
+        Icon icon,
+        {TextStyle titleStyle = const TextStyle(
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+        TextStyle descStyle =
+            const TextStyle(fontSize: 20, color: Colors.white),
+        TextStyle dateStyle =
+            const TextStyle(fontSize: 15, color: Colors.white),
+        TextStyle addressStyle = const TextStyle(
+            fontSize: 15, color: Colors.black, fontStyle: FontStyle.italic),
+        double widthRatio = 0.8}) =>
     Card(
       margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
       shape: RoundedRectangleBorder(
@@ -850,9 +928,15 @@ Widget buildRoundedAppointment(BuildContext context, Color backgroundColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: titleStyle,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: titleStyle,
+                ),
+                icon
+              ],
             ),
             const SizedBox(height: 4),
             Text(
@@ -865,17 +949,14 @@ Widget buildRoundedAppointment(BuildContext context, Color backgroundColor,
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      date,
-                      style: dateStyle),
+                    Text(date, style: dateStyle),
                   ],
                 ),
                 const SizedBox(width: 25),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text(
-                        address,
+                    Text(address,
                         style: addressStyle, textAlign: TextAlign.right),
                   ],
                 )
