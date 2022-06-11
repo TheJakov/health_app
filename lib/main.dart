@@ -198,7 +198,7 @@ class AppointmentsWidget extends StatelessWidget {
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.bold),
                       widthRatio: 0.9,
-                      Icon(
+                      const Icon(
                         Icons.timelapse,
                         size: 20,
                         color: Colors.black,
@@ -237,7 +237,7 @@ class AppointmentsWidget extends StatelessWidget {
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.bold),
                       widthRatio: 0.9,
-                      Icon(
+                      const Icon(
                         Icons.event_available,
                         size: 20,
                         color: Colors.black,
@@ -266,7 +266,7 @@ class AppointmentsWidget extends StatelessWidget {
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.bold),
                       widthRatio: 0.9,
-                      Icon(
+                      const Icon(
                         Icons.event_available,
                         size: 20,
                         color: Colors.black,
@@ -599,7 +599,7 @@ class MedicalReportsWidget extends StatelessWidget {
                     dateStyle: GoogleFonts.quicksand(
                         fontSize: 10, color: Colors.black),
                     widthRatio: 0.9,
-                    Icon(
+                    const Icon(
                       Icons.timelapse,
                       size: 20,
                       color: Colors.black,
@@ -630,7 +630,7 @@ class MedicalReportsWidget extends StatelessWidget {
                     dateStyle: GoogleFonts.quicksand(
                         fontSize: 10, color: Colors.black),
                     widthRatio: 0.9,
-                    Icon(
+                    const Icon(
                       Icons.event_available,
                       size: 20,
                       color: Colors.black,
@@ -651,7 +651,7 @@ class MedicalReportsWidget extends StatelessWidget {
                     dateStyle: GoogleFonts.quicksand(
                         fontSize: 10, color: Colors.white),
                     widthRatio: 0.9,
-                    Icon(
+                    const Icon(
                       Icons.event_available,
                       size: 20,
                       color: Colors.white,
@@ -709,7 +709,7 @@ class HomeWidget extends StatelessWidget {
                     descStyle: GoogleFonts.quicksand(
                         fontSize: 20, color: Colors.white),
                     widthRatio: 0.9,
-                    Icon(
+                    const Icon(
                       Icons.medical_services,
                       size: 20,
                       color: Colors.white,
@@ -727,7 +727,7 @@ class HomeWidget extends StatelessWidget {
                         color: Colors.black),
                     descStyle: GoogleFonts.quicksand(
                         fontSize: 20, color: Colors.black),
-                    Icon(
+                    const Icon(
                       Icons.event_rounded,
                       size: 20,
                       color: Colors.black,
@@ -755,7 +755,7 @@ class HomeWidget extends StatelessWidget {
                         color: Colors.black),
                     descStyle: GoogleFonts.quicksand(
                         fontSize: 20, color: Colors.black),
-                    Icon(
+                    const Icon(
                       Icons.info_outline,
                       size: 20,
                       color: Colors.black,
@@ -773,7 +773,7 @@ class HomeWidget extends StatelessWidget {
                         color: Colors.black),
                     descStyle: GoogleFonts.quicksand(
                         fontSize: 20, color: Colors.black),
-                    Icon(
+                    const Icon(
                       Icons.info_outline,
                       size: 20,
                       color: Colors.black,
@@ -791,7 +791,7 @@ class HomeWidget extends StatelessWidget {
                         color: Colors.black),
                     descStyle: GoogleFonts.quicksand(
                         fontSize: 20, color: Colors.black),
-                    Icon(
+                    const Icon(
                       Icons.info_outline,
                       size: 20,
                       color: Colors.black,
